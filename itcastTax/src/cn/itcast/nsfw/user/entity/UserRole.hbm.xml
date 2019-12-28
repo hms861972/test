@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.itcast.nsfw.user.entity">
+    <class name="UserRole" table="UserRole">
+      <composite-id name="id" class="UserRoleId">
+          <key-many-to-one name="role" lazy="false" class="cn.itcast.nsfw.role.entity.Role">
+              <column name="role_id"/>
+          </key-many-to-one>
+          <key-property name="userId" type="java.lang.String">
+              <column name="user_id" length="32"/>
+          </key-property>
+      </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test.entity">
+    <class name="test.entity.Person" table="person">
+        <id name="id" column="id" length="32" type="java.lang.String">
+            <generator class="uuid"></generator>
+        </id>
+        <property name="name" column="name" type="java.lang.String"></property>
+    </class>
+</hibernate-mapping>
